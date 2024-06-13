@@ -12,12 +12,12 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // cpp_function
-int cpp_function(Rcpp::List data);
+int cpp_function(const Rcpp::List data);
 RcppExport SEXP _fastorplayground_cpp_function(SEXP dataSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rcpp::List >::type data(dataSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::List >::type data(dataSEXP);
     rcpp_result_gen = Rcpp::wrap(cpp_function(data));
     return rcpp_result_gen;
 END_RCPP
